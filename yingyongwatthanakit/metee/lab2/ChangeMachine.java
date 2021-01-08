@@ -12,7 +12,7 @@ package yingyongwatthanakit.metee.lab2;
 
 public class ChangeMachine {
     public static void main(String[] args) {
-        if(args.length == 4) {
+        if (args.length == 4) {
             int coin1 = Integer.parseInt(args[0]);
             int coin2 = Integer.parseInt(args[1]);
             int coin5 = Integer.parseInt(args[2]);
@@ -42,7 +42,7 @@ public class ChangeMachine {
             System.out.println("100-baht bills : " + bill100);
             System.out.println("20-baht bills : " + bill20);
             System.out.println("Money remain : " + remain);
-        }else{
+        } else {
             System.err.println("ChangeMachine <1-baht coins> <2-baht coins> <5-baht coins> <10-baht coins>");
         }
     }

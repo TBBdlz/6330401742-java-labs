@@ -14,7 +14,7 @@ package yingyongwatthanakit.metee.lab2;
 
 public class CamelCaseNaming {
     public static void main(String[] args) {
-        if(args.length == 2) {
+        if (args.length == 2) {
             String firstWord = args[0];
             String secondWord = args[1];
             System.out.println("The first word is " + firstWord);
@@ -26,7 +26,7 @@ public class CamelCaseNaming {
                     + secondWord.substring(1, secondWord.length()).toLowerCase();
             // print output to the screen
             System.out.println("The concatenate with camel case is "+camelName);
-        }else{
+        } else {
             System.err.println("CamelCaseNaming : <First word> <Second word>");
         }
     }
