@@ -18,7 +18,7 @@ public class ChangeMachine {
             int coin5 = Integer.parseInt(args[2]);
             int coin10 = Integer.parseInt(args[3]);
             // non-negative value only
-            if ((coin1 < 0 || coin2 < 0) || (coin5 < 0 || coin10 < 0)){
+            if ((coin1 < 0 || coin2 < 0) || (coin5 < 0 || coin10 < 0)) {
                 System.err.println("ChangeMachine <1-baht coins> <2-baht coins> <5-baht coins> <10-baht coins>");
                 System.exit(1);
             }
