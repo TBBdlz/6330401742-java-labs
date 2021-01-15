@@ -36,7 +36,7 @@ public class GuessNumberGameV3 {
         if (val1 >= val2) {
             maxNum = val1;
             minNum = val2;
-        } else if (val2 > val1) {
+        } else {
             maxNum = val2;
             minNum = val1;
         }
