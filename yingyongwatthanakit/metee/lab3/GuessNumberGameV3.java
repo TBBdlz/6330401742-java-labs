@@ -27,31 +27,18 @@ public class GuessNumberGameV3 {
 
     static void configGame() {
         Scanner scan = new Scanner(System.in);
-        Boolean validity = false;
-        while (!validity) {
-            System.out.print("Enter the min and the max values:");
-            String data = scan.nextLine();
-            String[] numStr = data.split(" ");
-            // input must contains 2 number
-            if (numStr.length != 2) {
-                System.out.println("Please enter 2 values for min and max values");
-                continue;
-            }
-            int val1 = Integer.parseInt(numStr[0]);
-            int val2 = Integer.parseInt(numStr[1]);
-            // determine which value is max or min
-            if (val1 > val2) {
-                maxNum = val1;
-                minNum = val2;
-                validity = true;
-            } else if (val2 > val1) {
-                maxNum = val2;
-                minNum = val1;
-                validity = true;
-            // if they're the same value tell player to input different number.
-            } else {
-                System.out.println("Input number must be different.");
-            }
+        System.out.print("Enter the min and the max values:");
+        String data = scan.nextLine();
+        String[] numStr = data.split(" ");
+        int val1 = Integer.parseInt(numStr[0]);
+        int val2 = Integer.parseInt(numStr[1]);
+        // determine which value is max or min
+        if (val1 >= val2) {
+            maxNum = val1;
+            minNum = val2;
+        } else if (val2 > val1) {
+            maxNum = val2;
+            minNum = val1;
         }
         System.out.print("Enter the number of tries:");
         maxTries = scan.nextInt();
