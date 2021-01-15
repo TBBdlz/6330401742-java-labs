@@ -69,8 +69,8 @@ public class GuessNumberGameV3 {
                 System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
                 int guessNum = scan.nextInt();
                 // tell the user if their input is out of range.
-                if (guessNum < minNum || guessNum > maxNum) {
-                    System.out.println("The guess number must be in the range" + minNum + " and " + maxNum);
+                if (guessNum < minNum || guessNum > maxNum) { 
+                    System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
                     continue;
                 } else if (guessNum == correctNum) {
                     System.out.println("Congratulations! That's correct");
