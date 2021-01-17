@@ -28,17 +28,15 @@ public class GuessNumberGameV3 {
     static void configGame() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the min and the max values:");
-        String data = scan.nextLine();
-        String[] numStr = data.split(" ");
-        int val1 = Integer.parseInt(numStr[0]);
-        int val2 = Integer.parseInt(numStr[1]);
+        int value1 = scan.nextInt();
+        int value2 = scan.nextInt();
         // determine which value is max or min
-        if (val1 >= val2) {
-            maxNum = val1;
-            minNum = val2;
+        if (value1 >= value2) {
+            maxNum = value1;
+            minNum = value2;
         } else {
-            maxNum = val2;
-            minNum = val1;
+            maxNum = value2;
+            minNum = value1;
         }
         System.out.print("Enter the number of tries:");
         maxTries = scan.nextInt();
@@ -58,6 +56,7 @@ public class GuessNumberGameV3 {
                 // tell the user if their input is out of range.
                 if (guessNum < minNum || guessNum > maxNum) { 
                     System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
+                    continue;
                 } else if (guessNum == correctNum) {
                     System.out.println("Congratulations! That's correct");
                     winStatus = true;
@@ -70,7 +69,7 @@ public class GuessNumberGameV3 {
                     break;
                 }
             }
-            // Check if user is out of tries or win the game
+            // Check wherever user is out of tries or win the game
             if ((numTries - 1) == 0 || winStatus) {
                 System.out.print("If you want to play again? type 'y' to continue or 'q' to quit:");
                 String command = scan.next();
