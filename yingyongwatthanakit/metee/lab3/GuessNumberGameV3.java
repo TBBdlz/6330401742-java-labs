@@ -56,7 +56,6 @@ public class GuessNumberGameV3 {
                 // tell the user if their input is out of range.
                 if (guessNum < minNum || guessNum > maxNum) { 
                     System.out.println("The guess number must be in the range " + minNum + " and " + maxNum);
-                    continue;
                 } else if (guessNum == correctNum) {
                     System.out.println("Congratulations! That's correct");
                     winStatus = true;
@@ -69,7 +68,7 @@ public class GuessNumberGameV3 {
                     break;
                 }
             }
-            // Check wherever user is out of tries or win the game
+            // Check if user is out of tries or win the game
             if ((numTries - 1) == 0 || winStatus) {
                 System.out.print("If you want to play again? type 'y' to continue or 'q' to quit:");
                 String command = scan.next();
