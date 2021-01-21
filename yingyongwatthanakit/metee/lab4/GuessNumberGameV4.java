@@ -27,7 +27,6 @@ public class GuessNumberGameV4 {
     static int maxTries = 3;
     static int[] guesses;
     static int numGuesses = 0;
-
     public static void main(String[] args) {
         configGame();
         getAnwser();
