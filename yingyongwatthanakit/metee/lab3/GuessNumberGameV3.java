@@ -18,7 +18,6 @@ public class GuessNumberGameV3 {
     static int correctNum;
     static int minNum = 1, maxNum = 10;
     static int maxTries = 3;
-    private static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         configGame();
         getAnwser();
