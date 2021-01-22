@@ -56,7 +56,6 @@ public class GuessNumberGameV4 {
     }
 
     public static void playGames() {
-        getAnwser();
         playGame();
         while (true) {
             Scanner opd = new Scanner(System.in);
@@ -84,7 +83,6 @@ public class GuessNumberGameV4 {
     }
 
     public static void playGame() {
-        getAnwser();
         numGuesses = 0;
         guesses = new int[maxTries];
         boolean winStatus = false;
