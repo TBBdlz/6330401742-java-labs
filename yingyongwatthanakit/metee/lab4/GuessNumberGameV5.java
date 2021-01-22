@@ -17,7 +17,6 @@
 package yingyongwatthanakit.metee.lab4;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class GuessNumberGameV5 {
     
