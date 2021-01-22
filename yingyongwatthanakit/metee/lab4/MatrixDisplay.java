@@ -55,7 +55,7 @@ public class MatrixDisplay {
             String[] dataStr = rawData.split(" ");
             if (dataStr.length != columnDimension) { // more error catching code
                 System.out.println("Matrix has " + rowDimension + " x " + columnDimension + " dimensions");
-                System.out.println("Please enter correct matrix dimention");
+                System.out.println("Please enter correct matrix dimension");
                 i--;
                 continue;
             }
