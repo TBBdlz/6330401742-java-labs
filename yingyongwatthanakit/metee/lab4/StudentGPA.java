@@ -37,7 +37,7 @@ public class StudentGPA {
         while (true) {
             Scanner input = new Scanner(System.in);
             inputYear = input.nextInt();
-            if (inputYear <= 0) {
+            if (inputYear <= 0) { // when year = 0 exit the program
                 break;
             }
             inputTerm = input.nextInt();
@@ -53,7 +53,7 @@ public class StudentGPA {
         }
     }
 
-    static void showGPA() {
+    static void showGPA() { // showing course information
         while (true) {
             System.out.println("Type in 'o' to see all courses, 'a' for acumulated GPA, 't' for GPA for specific term or 'q' to exit");
             Scanner user = new Scanner(System.in);
@@ -65,7 +65,7 @@ public class StudentGPA {
                     System.out.println(year[i] + "  " + term[i] + "  " + courseName[i] + "  " + courseCredit[i] + "  " + grades[i]);
                     }
                     break;
-                case "a":
+                case "a": // accumulated GPA
                     double gpa;
                     int creditAttemp = 0;
                     double gradePoint = 0;
@@ -101,7 +101,7 @@ public class StudentGPA {
                     gpa = gradePoint / creditAttemp;
                     System.out.println("Accumulated GPA is " + gpa);
                     break;
-                case "t":
+                case "t": // accumulated for specific term and year
                     System.out.println("Enter which year and term do you want to see GPA");
                     Scanner spec = new Scanner(System.in);
                     int specYear = spec.nextInt();
