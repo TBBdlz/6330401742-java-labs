@@ -25,10 +25,10 @@ public class GuessNumberGameV3 {
     }
 
     static void configGame() {
-        Scanner scan = new Scanner(System.in);
+        Scanner config = new Scanner(System.in);
         System.out.print("Enter the min and the max values:");
-        int value1 = scan.nextInt();
-        int value2 = scan.nextInt();
+        int value1 = config.nextInt();
+        int value2 = config.nextInt();
         // determine which value is max or min
         if (value1 >= value2) {
             maxNum = value1;
@@ -38,7 +38,7 @@ public class GuessNumberGameV3 {
             minNum = value1;
         }
         System.out.print("Enter the number of tries:");
-        maxTries = scan.nextInt();
+        maxTries = config.nextInt();
     }
 
     static void getAnwser() {
@@ -47,9 +47,10 @@ public class GuessNumberGameV3 {
     }
 
     static void playGame() {
-        Boolean winStatus = false;
+        boolean winStatus = false;
         for (int numTries = maxTries; numTries > 0; numTries--) {
             while (true) {
+                Scanner scan = new Scanner(System.in);
                 System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
                 int guessNum = scan.nextInt();
                 // tell the user if their input is out of range.
@@ -69,14 +70,14 @@ public class GuessNumberGameV3 {
             }
             // Check if user is out of tries or win the game
             if ((numTries - 1) == 0 || winStatus) {
+                Scanner opd = new Scanner(System.in);
                 System.out.print("If you want to play again? type 'y' to continue or 'q' to quit:");
-                String command = scan.next();
+                String command = opd.next();
                 String commandToLowerCase = command.toLowerCase();
                 if (commandToLowerCase.equals("y")) {
                     getAnwser();
                     playGame();
                 } else if (commandToLowerCase.equals("q")) {   
-                    scan.close();
                     System.exit(1);
                 }
             }
