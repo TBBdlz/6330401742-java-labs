@@ -14,9 +14,12 @@ package yingyongwatthanakit.metee.lab2;
 public class Patient {
     public static void main(String[] args) {
         if (args.length == 3) {
-            System.out.println("Patient's name is " + args[0]);
-            System.out.println("Patient's age is " + args[1]);
-            System.out.println(args[0] + " comes from " + args[2]);
+            String name = args[0];
+            int age = Integer.parseInt(args[1]);
+            String country = args[2];
+            System.out.println("Patient's name is " + name);
+            System.out.println("Patient's age is " + age);
+            System.out.println(name + " comes from " + country);
         } else {
             System.err.println("Patient <patient name> <patient age> <country>");
         }
