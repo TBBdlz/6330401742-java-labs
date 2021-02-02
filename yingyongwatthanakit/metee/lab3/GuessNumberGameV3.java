@@ -21,7 +21,7 @@ public class GuessNumberGameV3 {
     public static void main(String[] args) {
         configGame();
         getAnwser();
-        playGame();
+        playGames();
     }
 
     static void configGame() {
@@ -46,10 +46,29 @@ public class GuessNumberGameV3 {
         correctNum = minNum + (int)(Math.random() * ((maxNum - minNum) + 1));
     }
 
+    public static void playGames() {
+        playGame();
+        while (true) {
+            Scanner opd = new Scanner(System.in);
+            System.out.println("If you want to play again? type 'y' to continue or 'q' to quit:");
+            String command = opd.next();
+            String commandToLowerCase = command.toLowerCase();
+            switch (commandToLowerCase) {
+                case "y":
+                    getAnwser();
+                    playGames();
+                case "q":
+                    System.exit(1);
+                default:
+                    continue;
+            }
+        }
+    }
+
     static void playGame() {
         boolean winStatus = false;
         for (int numTries = maxTries; numTries > 0; numTries--) {
-            while (true) {
+            while (!winStatus) {
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Please enter a guess (" + minNum + "-" + maxNum + "):");
                 int guessNum = scan.nextInt();
@@ -66,19 +85,6 @@ public class GuessNumberGameV3 {
                 } else {
                     System.out.println("Please type a higher number! Number of remaining tries " + (numTries - 1));
                     break;
-                }
-            }
-            // Check if user is out of tries or win the game
-            if ((numTries - 1) == 0 || winStatus) {
-                Scanner opd = new Scanner(System.in);
-                System.out.print("If you want to play again? type 'y' to continue or 'q' to quit:");
-                String command = opd.next();
-                String commandToLowerCase = command.toLowerCase();
-                if (commandToLowerCase.equals("y")) {
-                    getAnwser();
-                    playGame();
-                } else if (commandToLowerCase.equals("q")) {   
-                    System.exit(1);
                 }
             }
         }
