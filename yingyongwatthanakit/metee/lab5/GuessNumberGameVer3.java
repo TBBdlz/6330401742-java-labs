@@ -5,6 +5,7 @@
   playGames() will ask player 3 more quesion if they
   want to see average, minimum guess or maximum guess
   New methods: getMin(), getMax(), getAverage()
+  Author: Metee Yingyongwatthanakit
   ID: 633040174-2
   Sec: 2
   Date: 6 February 2021

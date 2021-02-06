@@ -6,6 +6,7 @@
     testConstructors() to test class constructors
     testPlayGames() to test GuessNumberGameVer2 and playGames() method
     testGuessNumberGameVer3() 
+  Author: Metee Yingyongwatthanakit
   ID: 633040174-2
   Sec: 2
   Date: 6 February 2021
