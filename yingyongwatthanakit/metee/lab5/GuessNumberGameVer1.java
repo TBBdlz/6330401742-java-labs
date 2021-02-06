@@ -98,9 +98,9 @@ public class GuessNumberGameVer1 {
 
     @Override
     public String toString() { // toString return a string which use to System.out.print/println() method
-        return "GuessNumberGame with min number as " + String.valueOf(minNum)
-                + " max number as " + String.valueOf(maxNum)
-                + " max number of tries as " + String.valueOf(maxTries);
+        return "GuessNumberGame with min number as " + minNum
+                + " max number as " + maxNum
+                + " max number of tries as " + maxTries;
     }
 
     public static int getNumOfGames() { // this method return numOfGames
