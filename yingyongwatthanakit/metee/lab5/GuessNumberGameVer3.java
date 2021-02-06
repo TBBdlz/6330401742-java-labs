@@ -67,8 +67,8 @@ public class GuessNumberGameVer3 extends GuessNumberGameVer2 {
     public double guessAverage() { // this method return average of guesses
         int sum = 0;
         double average;
-        for (int guess : guesses) {
-            sum += guess;
+        for (int i = 0; i < numGuesses; i++) {
+            sum += guesses[i];
         }
         average = (double) sum / numGuesses;
 
