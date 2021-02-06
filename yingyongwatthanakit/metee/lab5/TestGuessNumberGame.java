@@ -1,10 +1,23 @@
+/*
+  TestGuessNumberGame is a program mainly to test GuessNumberGame
+  this program can test GuessNumberGameVer1/2/3
+  class methods:
+    testSetterGetterMethod() to test get/set() methods
+    testConstructors() to test class constructors
+    testPlayGames() to test GuessNumberGameVer2 and playGames() method
+    testGuessNumberGameVer3() 
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab5;
 
 public class TestGuessNumberGame {
     public static void main(String[] args) { // you can remove comment to test GuessNumberGameVer1/2/3
         // testConstructors();
         // testSetterGetterMethod();
-        testPlayGames();
+        // testPlayGames();
+        testGuessNumberGameVer3();
     }
 
     public static void testSetterGetterMethod() {
@@ -40,6 +53,11 @@ public class TestGuessNumberGame {
 
     public static void testPlayGames() {
         GuessNumberGameVer2 gng = new GuessNumberGameVer2(5, 10, 4);
+        gng.playGames();
+    }
+
+    public static void testGuessNumberGameVer3() {
+        GuessNumberGameVer3 gng = new GuessNumberGameVer3(5, 10);
         gng.playGames();
     }
 
