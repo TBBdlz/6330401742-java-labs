@@ -24,7 +24,7 @@ public class GuessNumberGameVer1 {
     protected int maxTries;
     protected static int numOfGames = 0;
 
-    public GuessNumberGameVer1() { // default constructor
+    public GuessNumberGameVer1() {
         this.minNum = 1;
         this.maxNum = 10;
         this.maxTries = 3;
@@ -32,7 +32,7 @@ public class GuessNumberGameVer1 {
         numOfGames++;
     }
 
-    public GuessNumberGameVer1(int minNum, int maxNum) { // 2 arguments constructor
+    public GuessNumberGameVer1(int minNum, int maxNum) {
         this.minNum = minNum;
         this.maxNum = maxNum;
         this.maxTries = 3;
@@ -40,7 +40,7 @@ public class GuessNumberGameVer1 {
         numOfGames++;
     }
 
-    public GuessNumberGameVer1(int minNum, int maxNum, int maxTries) { // 3 arguments constructor
+    public GuessNumberGameVer1(int minNum, int maxNum, int maxTries) {
         this.minNum = minNum;
         this.maxNum = maxNum;
         this.maxTries = maxTries;
@@ -53,7 +53,7 @@ public class GuessNumberGameVer1 {
     }
 
     public int getMinNum() { // method returns minNum
-        return this.minNum;
+        return minNum;
     }
 
     public void setMaxNum(int maxNum) { // set maxNum to some integer
@@ -61,7 +61,7 @@ public class GuessNumberGameVer1 {
     }
 
     public int getMaxNum() { // method returns maxNum
-        return this.maxNum;
+        return maxNum;
     }
 
     public void setMaxTries(int maxTries) { // set maxTries to some integer
@@ -69,7 +69,7 @@ public class GuessNumberGameVer1 {
     } 
 
     public int getMaxTries() { // method return maxTries
-        return this.maxTries;
+        return maxTries;
     }
 
     public void playGame() { // play GuessNumberGameVer1 through this method

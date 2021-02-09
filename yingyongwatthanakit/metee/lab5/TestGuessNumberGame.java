@@ -15,8 +15,8 @@ package yingyongwatthanakit.metee.lab5;
 
 public class TestGuessNumberGame {
     public static void main(String[] args) { // you can remove comment to test GuessNumberGameVer1/2/3
-        testConstructors();
-        // testSetterGetterMethod();
+        // testConstructors();
+        testSetterGetterMethod();
         // testPlayGames();
         // testGuessNumberGameVer3();
     }
