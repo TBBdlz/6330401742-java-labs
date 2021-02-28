@@ -2,7 +2,7 @@
   GuessNumberGameVer3 inherited from GuessNumberGameVer2
   this class contains modify method and new methods
   GuessNumberGameVer3 has override version of playGames()
-  playGames() will ask player 3 more quesion if they
+  playGames() will ask player 3 more question if they
   want to see average, minimum guess or maximum guess
   New methods: getMin(), getMax(), getAverage()
   Author: Metee Yingyongwatthanakit
@@ -59,7 +59,6 @@ public class GuessNumberGameVer3 extends GuessNumberGameVer2 {
                     System.out.println("Max = " + guessMax());
                     continue;
                 default:
-                    continue;
             }
         }
     }
