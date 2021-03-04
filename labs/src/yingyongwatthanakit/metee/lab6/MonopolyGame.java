@@ -65,4 +65,5 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
         return "Game name : " + gameName +
                 "Number of players : " + numOfPlayers;
     }
+
 }
