@@ -10,18 +10,15 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
     public MonopolyGame() {
         gameName = "Monopoly Game";
         numOfPlayers = 2;
-        cash = new int[2];
-        cash[0] = 1500;
-        cash[1] = 1500;
-    }
-
-    public MonopolyGame(int numOfPlayers) {
-        gameName = "Monopoly Game";
-        this.numOfPlayers = numOfPlayers;
         cash = new int[numOfPlayers];
         for (int i = 0; i < numOfPlayers; i++) {
             cash[i] = 1500;
         }
+    }
+
+    public MonopolyGame(int numOfPlayers) {
+        this();
+        this.numOfPlayers = numOfPlayers;
     }
 
     public void setCash(int[] cash) {
