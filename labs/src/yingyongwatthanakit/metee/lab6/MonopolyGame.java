@@ -1,7 +1,5 @@
 package yingyongwatthanakit.metee.lab6;
 
-import java.util.Arrays;
-
 public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard {
 
     protected int[] cash;
@@ -10,15 +8,18 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
     public MonopolyGame() {
         gameName = "Monopoly Game";
         numOfPlayers = 2;
+        cash = new int[2];
+        cash[0] = 1500;
+        cash[1] = 1500;
+    }
+
+    public MonopolyGame(int numOfPlayers) {
+        gameName = "Monopoly Game";
+        this.numOfPlayers = numOfPlayers;
         cash = new int[numOfPlayers];
         for (int i = 0; i < numOfPlayers; i++) {
             cash[i] = 1500;
         }
-    }
-
-    public MonopolyGame(int numOfPlayers) {
-        this();
-        this.numOfPlayers = numOfPlayers;
     }
 
     public void setCash(int[] cash) {
@@ -30,8 +31,7 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
         for (int i = 0; i < numOfPlayers; i++) {
             cashStr[i] = String.valueOf(cash[i]);
         }
-        String result = String.join(" ",cashStr);
-        return  result;
+        return String.join(" ",cashStr);
     }
 
     @Override
@@ -41,7 +41,9 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
 
     @Override
     public String gameRules() {
-        return null;
+        return "Do you want to get rich? Then let's play monopoly game!!!\n" +
+                "Each player will row the dice and move by a number\n" +
+                "Player can buy and upgrade their lands";
     }
 
     @Override
@@ -65,5 +67,4 @@ public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard
         return "Game name : " + gameName +
                 "Number of players : " + numOfPlayers;
     }
-
 }

@@ -11,8 +11,6 @@
 */
 package yingyongwatthanakit.metee.lab6;
 
-import java.util.Locale;
-
 public class DiceGame extends Game {
 
     protected int diceRoll;

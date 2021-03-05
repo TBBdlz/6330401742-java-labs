@@ -35,21 +35,20 @@ public class HighLowGame extends DiceGame implements UseDice, HasRule {
 
     @Override
     public void playGame() {
-        String winingText = "Congratulations! you win.";
-        String losingText = "Sorry. you lose.";
         int middle = (numOfDice * maxNum - numOfDice + minNum) / 2 + numOfDice - minNum;
-        if (diceRoll > middle && answer.toLowerCase().equals("h")) {
-            System.out.println(winingText);
-        } else if (diceRoll <= middle && answer.toLowerCase().equals("l")) {
-            System.out.println(winingText);
+        if (diceRoll > middle && answer.toLowerCase().equals("h")) { // high wins
+            System.out.println("Congratulations! you win.");
+        } else if (diceRoll <= middle && answer.toLowerCase().equals("l")) { // low wins
+            System.out.println("Congratulations! you win.");
         } else {
-            System.out.println(losingText);
+            System.out.println("Sorry. you lose.");
         }
     }
 
     @Override
     public String gameRules() {
-        return null;
+        return "Guess l for low or h for high, if player chose l they can win if sum of dice is less than 11\n" +
+                "And if they chose h they can win if sum of dice is more than 10";
     }
 
     @Override
