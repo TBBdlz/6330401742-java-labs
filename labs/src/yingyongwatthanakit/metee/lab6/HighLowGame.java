@@ -36,9 +36,9 @@ public class HighLowGame extends DiceGame implements UseDice, HasRule {
     @Override
     public void playGame() {
         int middle = (numOfDice * maxNum - numOfDice + minNum) / 2 + numOfDice - minNum;
-        if (diceRoll > middle && answer.toLowerCase().equals("h")) { // high wins
+        if (diceRoll > middle && answer.equalsIgnoreCase("h")) { // high wins
             System.out.println("Congratulations! you win.");
-        } else if (diceRoll <= middle && answer.toLowerCase().equals("l")) { // low wins
+        } else if (diceRoll <= middle && answer.equalsIgnoreCase("l")) { // low wins
             System.out.println("Congratulations! you win.");
         } else {
             System.out.println("Sorry. you lose.");

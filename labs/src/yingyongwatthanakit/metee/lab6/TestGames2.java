@@ -14,6 +14,7 @@ public class TestGames2 {
         game3.playGame();
         MonopolyGame game4 = new MonopolyGame();
         System.out.println(game4);
+        game4.playGame();
         MonopolyGame game5 = new MonopolyGame(3);
         System.out.println(game5);
         game5.setUpBoard();
