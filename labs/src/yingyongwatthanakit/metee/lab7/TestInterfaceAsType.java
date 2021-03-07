@@ -38,4 +38,5 @@ public class TestInterfaceAsType {
             System.out.printf("Game(%d): rollDice method returns %d\n", i, game1.getDiceRoll());
         }
     }
+
 }
