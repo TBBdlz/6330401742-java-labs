@@ -1,3 +1,13 @@
+/*
+  Monopoly is a game inherit from DiceGame
+  Players have initial money at 1500$
+  and can spend for buying lands or upgrade lands
+  during the game
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab6;
 
 public class MonopolyGame extends DiceGame implements UseDice, HasRule, UseBoard {

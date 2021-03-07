@@ -1,3 +1,14 @@
+/*
+  HighLowGame is a game inherit from DiceGame
+  the game let player guess the outcome of the dice
+  if they guess h for high they can win if sum of dice
+  is more than 10 and if they guess l for low
+  they can win if sum of dice is less than 11
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab6;
 
 public class HighLowGame extends DiceGame implements UseDice, HasRule {

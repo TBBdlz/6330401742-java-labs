@@ -1,6 +1,16 @@
+/*
+  TestGames is program that
+  test constructor of DiceGame and HighLowGame
+  Program also test their methods too
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab6;
 
 public class TestGames {
+
     public static void main(String[] args) {
         DiceGame game1 = new DiceGame();
         System.out.println(game1);
@@ -21,4 +31,5 @@ public class TestGames {
         System.out.println(game4);
         game4.playGame();
     }
+
 }

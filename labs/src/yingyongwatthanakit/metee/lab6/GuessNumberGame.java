@@ -1,3 +1,13 @@
+/*
+  GuessNumberGame in lab6 is inherit from Game
+  which is abstract class
+  GuessNumberGame must define playGame() method to
+  be able to compile properly
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab6;
 
 import java.util.Scanner;

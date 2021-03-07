@@ -1,3 +1,11 @@
+/*
+  TestGames2 is program that
+  test MonopolyGame and HighLowGame
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 6 February 2021
+*/
 package yingyongwatthanakit.metee.lab6;
 
 public class TestGames2 {
