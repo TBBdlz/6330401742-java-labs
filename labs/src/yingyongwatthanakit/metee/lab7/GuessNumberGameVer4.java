@@ -53,7 +53,8 @@ public class GuessNumberGameVer4 extends GuessNumberGameVer3 {
     }
 
     public static void main(String[] args) {
-        // testComparingMaxTries();
+        testComparingMaxTries();
+        System.out.println("\n####################\n");
         testComparingMaxTriesThenRandomRange();
     }
 
