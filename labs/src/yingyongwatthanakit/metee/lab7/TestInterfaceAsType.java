@@ -34,7 +34,7 @@ public class TestInterfaceAsType {
                 System.out.printf("Game(%d):%d has dice roll less than Game(%d):%d\n", i, game1.getDiceRoll()
                                                                                      , i+1, game2.getDiceRoll());
             }
-            game1 = new HighLowGame();
+            games.get(i).rollDice();
             System.out.printf("Game(%d): rollDice method returns %d\n", i, game1.getDiceRoll());
         }
     }
