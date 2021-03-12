@@ -21,7 +21,7 @@ public class TestInterfaceAsType {
         games.add(new MonopolyGame());
         games.add(new MonopolyGame(3));
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < games.size() - 1; i++) {
             DiceGame game1 = (DiceGame) games.get(i);
             DiceGame game2 = (DiceGame) games.get(i+1);
             if (compareRollDice(game1, game2) > 0) {
