@@ -1,3 +1,13 @@
+/*
+  GuessNumberGameVer4 is inherit from GuessNumberGameVer3
+  this game is use to test comparator interface
+  included testComparingMaxTries() and
+  testComparingMaxTriesThenRandomRange()
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 12 March 2021
+*/
 package yingyongwatthanakit.metee.lab7;
 
 import yingyongwatthanakit.metee.lab5.GuessNumberGameVer3;

@@ -1,3 +1,15 @@
+/*
+  TestInterfaceAsType is a program
+  to use interface as type
+  This program compare diceRoll attribute
+  and print to the screen
+  The program also rollDice() again
+  and print diceRoll value to the screen
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 12 March 2021
+*/
 package yingyongwatthanakit.metee.lab7;
 
 import yingyongwatthanakit.metee.lab6.DiceGame;

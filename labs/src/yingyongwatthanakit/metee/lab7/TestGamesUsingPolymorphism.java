@@ -1,3 +1,13 @@
+/*
+  TestGamesUsingPolymorphism use
+  polymorphism features in Java
+  to print games and play games
+  using arrayList and for loop
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 12 March 2021
+*/
 package yingyongwatthanakit.metee.lab7;
 
 import yingyongwatthanakit.metee.lab6.DiceGame;
