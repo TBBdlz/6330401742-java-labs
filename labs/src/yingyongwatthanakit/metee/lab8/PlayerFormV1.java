@@ -33,6 +33,17 @@ public class PlayerFormV1 extends MySimpleWindow {
         genderGrp = new ButtonGroup();
     }
 
+    protected void addNameThroughGender() {
+        formPanel.add(nameLabel);
+        formPanel.add(nameText);
+        formPanel.add(nationalityLabel);
+        formPanel.add(nationalityText);
+        formPanel.add(dobLabel);
+        formPanel.add(dobText);
+        formPanel.add(genderLabel);
+        formPanel.add(genderPanel);
+    }
+
     @Override
     protected void addComponents() {
         super.addComponents();
@@ -46,14 +57,7 @@ public class PlayerFormV1 extends MySimpleWindow {
         genderPanel.add(othersRatioButton);
 
         formPanel.setLayout(new GridLayout(4, 2));
-        formPanel.add(nameLabel);
-        formPanel.add(nameText);
-        formPanel.add(nationalityLabel);
-        formPanel.add(nationalityText);
-        formPanel.add(dobLabel);
-        formPanel.add(dobText);
-        formPanel.add(genderLabel);
-        formPanel.add(genderPanel);
+        addNameThroughGender();
         mainPanel.add(formPanel, BorderLayout.NORTH);
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
     }
