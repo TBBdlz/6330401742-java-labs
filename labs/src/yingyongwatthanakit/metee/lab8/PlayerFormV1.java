@@ -46,6 +46,7 @@ public class PlayerFormV1 extends MySimpleWindow {
 
     @Override
     protected void addComponents() {
+        initComponents();
         super.addComponents();
         mainPanel.setLayout(new BorderLayout());
         // Gender Panel Add Components
@@ -64,7 +65,6 @@ public class PlayerFormV1 extends MySimpleWindow {
 
     public static void createAndShowGUI() {
         PlayerFormV1 msw = new PlayerFormV1("Player Form V1");
-        msw.initComponents();
         msw.addComponents();
         msw.setFrameFeatures();
     }

@@ -35,7 +35,7 @@ public class PlayerFormV2 extends PlayerFormV1 {
     protected void addComponents() {
         super.addComponents();
         formPanel.setLayout(new GridLayout(5, 2));
-
+    
         // set up notePanel
         notePanel.setLayout(new BorderLayout());
         notePanel.add(noteLabel, BorderLayout.NORTH);
@@ -53,7 +53,6 @@ public class PlayerFormV2 extends PlayerFormV1 {
 
     public static void createAndShowGUI() {
         PlayerFormV2 msw = new PlayerFormV2("Player Form V2");
-        msw.initComponents();
         msw.addComponents();
         msw.setFrameFeatures();
     }
