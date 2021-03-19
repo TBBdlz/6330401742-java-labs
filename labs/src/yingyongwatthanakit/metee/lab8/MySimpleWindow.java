@@ -15,11 +15,12 @@ public class MySimpleWindow extends JFrame {
     protected void initComponents() {
         mainPanel = (JPanel) this.getContentPane();
         buttonPanel = new JPanel();
-        resetButton = new JButton("reset");
-        submitButton = new JButton("submit");
+        resetButton = new JButton("Reset");
+        submitButton = new JButton("Submit");
     }
 
      protected void addComponents() {
+         initComponents();
          buttonPanel.add(resetButton);
          buttonPanel.add(submitButton);
          mainPanel.add(buttonPanel);
@@ -34,7 +35,6 @@ public class MySimpleWindow extends JFrame {
 
      public static void createAndShowGUI() {
         MySimpleWindow msw = new MySimpleWindow("My Simple Window");
-        msw.initComponents();
         msw.addComponents();
         msw.setFrameFeatures();
      }

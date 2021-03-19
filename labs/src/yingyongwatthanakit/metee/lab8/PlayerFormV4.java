@@ -31,8 +31,6 @@ public class PlayerFormV4 extends PlayerFormV3 {
         sizeMenu.add(new JMenuItem("16"));
         sizeMenu.add(new JMenuItem("20"));
         sizeMenu.add(new JMenuItem("24"));
-
-
     }
 
     @Override
@@ -41,6 +39,7 @@ public class PlayerFormV4 extends PlayerFormV3 {
         fileMenu.add(newItem);
         fileMenu.add(openItem);
         fileMenu.add(saveItem);
+        fileMenu.addSeparator();
         fileMenu.add(exitItem);
         configMenu.add(colorMenu);
         configMenu.add(sizeMenu);
@@ -51,11 +50,6 @@ public class PlayerFormV4 extends PlayerFormV3 {
 
     public PlayerFormV4(String title) {
         super(title);
-    }
-
-    @Override
-    protected void setFrameFeatures() {
-        super.setFrameFeatures();
     }
 
     public static void createAndShowGUI() {

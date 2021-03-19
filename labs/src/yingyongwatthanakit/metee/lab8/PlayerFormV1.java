@@ -24,11 +24,11 @@ public class PlayerFormV1 extends MySimpleWindow {
         nationalityLabel = new JLabel("Nationality:");
         dobLabel = new JLabel("Date of Birth (eg.,31-01-1990):");
         genderLabel = new JLabel("Gender:");
-        nameText = new JTextField();
-        nationalityText = new JTextField();
-        dobText = new JTextField();
-        maleRadioButton = new JRadioButton("Male", true);
-        femaleRatioButton = new JRadioButton("Female");
+        nameText = new JTextField(15);
+        nationalityText = new JTextField(15);
+        dobText = new JTextField(15);
+        maleRadioButton = new JRadioButton("Male");
+        femaleRatioButton = new JRadioButton("Female", true);
         othersRatioButton = new JRadioButton("Others");
         genderGrp = new ButtonGroup();
     }
@@ -46,7 +46,6 @@ public class PlayerFormV1 extends MySimpleWindow {
 
     @Override
     protected void addComponents() {
-        initComponents();
         super.addComponents();
         mainPanel.setLayout(new BorderLayout());
         // Gender Panel Add Components

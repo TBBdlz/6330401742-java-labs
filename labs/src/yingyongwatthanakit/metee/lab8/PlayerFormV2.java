@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlayerFormV2 extends PlayerFormV1 {
+
+    protected JScrollPane noteScrollPane;
     protected JPanel notePanel;
     protected JLabel playerTypeLabel, noteLabel;
     protected JTextArea noteTextArea;
@@ -17,12 +19,15 @@ public class PlayerFormV2 extends PlayerFormV1 {
         playerTypeLabel = new JLabel("Player Type:");
         noteLabel = new JLabel("Note:");
         noteTextArea = new JTextArea(3, 35);
+        noteScrollPane = new JScrollPane(noteTextArea);
+        noteScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         noteTextArea.setLineWrap(true);
         noteTextArea.setWrapStyleWord(true);
         noteTextArea.setText("A game is a structured form of play, usually undertaken for\n");
         noteTextArea.append("entertainment or fun, and sometimes used as an educational tool.");
         playerTypeStr = new String[]{"Beginner", "Amateur", "Professional"};
         playerTypeBox = new JComboBox<String>(playerTypeStr);
+        playerTypeBox.setSelectedIndex(1);
     }
 
     protected void addNameThroughPlayerType() {
@@ -39,7 +44,7 @@ public class PlayerFormV2 extends PlayerFormV1 {
         // set up notePanel
         notePanel.setLayout(new BorderLayout());
         notePanel.add(noteLabel, BorderLayout.NORTH);
-        notePanel.add(noteTextArea, BorderLayout.SOUTH);
+        notePanel.add(noteScrollPane, BorderLayout.SOUTH);
 
         addNameThroughPlayerType();
         mainPanel.add(formPanel, BorderLayout.NORTH);
