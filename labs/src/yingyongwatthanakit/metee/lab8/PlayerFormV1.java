@@ -1,3 +1,15 @@
+/*
+  PlayerFormV1 is GUI program which
+  inherit from MySimpleWindow
+  additional from MySimpleWindow
+  this program shows Name, Nationality
+  and gender form
+  Gender
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 19 March 2021
+*/
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;

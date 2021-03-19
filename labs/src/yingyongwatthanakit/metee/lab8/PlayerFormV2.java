@@ -1,3 +1,19 @@
+/*
+  PlayerFormV2 is GUI program which
+  inherit from PlayerFormV1
+  additional from PlayerFormV1
+  this program shows additional
+  playerType Combo Box which has
+  "Beginner", "Amateur", "Professional" in
+  playerType Combo Box
+  and PlayerFormV2 also display note
+  panel contains note for games
+  Gender
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 19 March 2021
+*/
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;

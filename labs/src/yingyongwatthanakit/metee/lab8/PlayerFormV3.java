@@ -1,3 +1,16 @@
+/*
+  PlayerFormV3 is GUI program which
+  inherit from PlayerFormV2
+  additional from PlayerFormV2
+  this program shows additional
+  display game list which contains
+  "Guess Number Game", "High-Low Game"
+  and "Monopoly Game"
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 19 March 2021
+*/
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;

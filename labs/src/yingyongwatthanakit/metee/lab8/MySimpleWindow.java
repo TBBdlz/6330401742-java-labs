@@ -1,3 +1,13 @@
+/*
+  MySimpleWindow is GUI java program
+  this program inherit from JFrame
+  create simple button "Reset" and "Submit"
+  set frame features and create GUI to the screen
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 19 March 2021
+*/
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;

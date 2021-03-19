@@ -1,3 +1,15 @@
+/*
+  PlayerFormV4 is GUI program which
+  inherit from PlayerFormV3
+  additional from PlayerFormV3
+  this program add menu         bar
+  which has file menu
+  and config menu
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 19 March 2021
+*/
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;
