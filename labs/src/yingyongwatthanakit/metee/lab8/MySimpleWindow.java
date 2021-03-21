@@ -22,14 +22,14 @@ public class MySimpleWindow extends JFrame {
         super(title);
     }
 
-    protected void initComponents() {
+    protected void initComponents() { // create GUI objects
         mainPanel = (JPanel) this.getContentPane();
         buttonPanel = new JPanel();
         resetButton = new JButton("Reset");
         submitButton = new JButton("Submit");
     }
 
-     protected void addComponents() {
+     protected void addComponents() { // add GUI objects
          initComponents();
          buttonPanel.add(resetButton);
          buttonPanel.add(submitButton);

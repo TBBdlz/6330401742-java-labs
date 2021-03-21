@@ -13,7 +13,6 @@
 package yingyongwatthanakit.metee.lab8;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class PlayerFormV4 extends PlayerFormV3 {
 
@@ -23,7 +22,7 @@ public class PlayerFormV4 extends PlayerFormV3 {
     protected ImageIcon newImg, openImg, saveImg;
 
     @Override
-    public void initComponents() {
+    protected void initComponents() { // create GUI objects
         super.initComponents();
         newImg = new ImageIcon("images/New-file-icon.png");
         openImg = new ImageIcon("images/folder-open-icon.png");
@@ -46,7 +45,7 @@ public class PlayerFormV4 extends PlayerFormV3 {
     }
 
     @Override
-    public void addComponents() {
+    protected void addComponents() { // add GUI objects
         super.addComponents();
         fileMenu.add(newItem);
         fileMenu.add(openItem);

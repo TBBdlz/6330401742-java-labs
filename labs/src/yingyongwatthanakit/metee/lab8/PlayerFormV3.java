@@ -23,7 +23,7 @@ public class PlayerFormV3 extends PlayerFormV2 {
     protected JLabel gameListLabel;
 
     @Override
-    public void initComponents() {
+    protected void initComponents() { // create GUI objects
         super.initComponents();
         gameListStr = new String[]{"Guess Number Game",
                 "High-Low Game","Monopoly Game"};
@@ -32,7 +32,7 @@ public class PlayerFormV3 extends PlayerFormV2 {
     }
 
     @Override
-    public void addComponents() {
+    protected void addComponents() { // add GUI objects
         super.addComponents();
 
         formPanel.setLayout(new GridLayout(6, 2));

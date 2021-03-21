@@ -28,7 +28,7 @@ public class PlayerFormV1 extends MySimpleWindow {
     }
 
     @Override
-    protected void initComponents() {
+    protected void initComponents() { // create GUI objects
         super.initComponents();
         formPanel = new JPanel();
         genderPanel = new JPanel();
@@ -45,7 +45,7 @@ public class PlayerFormV1 extends MySimpleWindow {
         genderGrp = new ButtonGroup();
     }
 
-    protected void addNameThroughGender() {
+    protected void addNameThroughGender() { // add name, nationality and gender to formPanel
         formPanel.add(nameLabel);
         formPanel.add(nameText);
         formPanel.add(nationalityLabel);
@@ -57,7 +57,7 @@ public class PlayerFormV1 extends MySimpleWindow {
     }
 
     @Override
-    protected void addComponents() {
+    protected void addComponents() { // add GUI objects
         super.addComponents();
         mainPanel.setLayout(new BorderLayout());
         // Gender Panel Add Components

@@ -29,7 +29,7 @@ public class PlayerFormV2 extends PlayerFormV1 {
     protected String[] playerTypeStr;
 
     @Override
-    protected void initComponents() {
+    protected void initComponents() { // create GUI objects
         super.initComponents();
         notePanel = new JPanel();
         playerTypeLabel = new JLabel("Player Type:");
@@ -46,14 +46,14 @@ public class PlayerFormV2 extends PlayerFormV1 {
         playerTypeBox.setSelectedIndex(1);
     }
 
-    protected void addNameThroughPlayerType() {
+    protected void addNameThroughPlayerType() { // add name, nationality, gender and player type to form panel
         addNameThroughGender();
         formPanel.add(playerTypeLabel);
         formPanel.add(playerTypeBox);
     }
 
     @Override
-    protected void addComponents() {
+    protected void addComponents() { // add GUI objects
         super.addComponents();
         formPanel.setLayout(new GridLayout(5, 2));
     
