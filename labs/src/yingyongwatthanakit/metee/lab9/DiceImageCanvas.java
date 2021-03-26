@@ -1,3 +1,15 @@
+/*
+  DiceImageCanvas is a subclass of JPanel
+  DiceImageCanvas contains all variables
+  about square coordinate, margin
+  Rectangle2D.Double and Ellipse.Double
+  this class contain @Override paintComponent()
+  which can draw dice from 1 - 6
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 26 March 2021
+*/
 package yingyongwatthanakit.metee.lab9;
 
 import javax.swing.*;
@@ -28,7 +40,7 @@ public class DiceImageCanvas extends JPanel {
                             , circleTopMiddle, circleBottomMiddle;
     protected Rectangle2D.Double square;
     protected Ellipse2D.Double[] dice1, dice2, dice3, dice4, dice5, dice6;
-    protected Ellipse2D.Double[][] diceSet;
+    protected Ellipse2D.Double[][] diceSet; // contains all possible array of circle
 
     public DiceImageCanvas(int diceNumber) {
         this.setSize(canvasWidth, canvasHeight);
@@ -62,6 +74,7 @@ public class DiceImageCanvas extends JPanel {
         g2d.setColor(Color.WHITE);
         g2d.fill(square);
         g2d.setColor(Color.RED);
+        // loop over all the circle
         for (Ellipse2D.Double circle : diceSet[diceNumber - 1]) {
             g2d.fill(circle);
         }

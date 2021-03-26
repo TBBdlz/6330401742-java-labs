@@ -1,3 +1,14 @@
+/*
+  GuessNumberGameWindow is GUI game
+  this program has button variables
+  Font, TextField and Labels
+  Buttons are fill with pictures
+  all font is set to "Serif", Bold font
+  and has 24px size
+  ID: 633040174-2
+  Sec: 2
+  Date: 26 March 2021
+*/
 package yingyongwatthanakit.metee.lab9;
 
 import javax.swing.*;
@@ -20,7 +31,7 @@ public class GuessNumberGameWindow extends JFrame {
         super(title);
     }
 
-    protected void initComponents() {
+    protected void initComponents() { // initialize all components
         button1 = new JButton();
         button2 = new JButton();
         button3 = new JButton();
@@ -31,11 +42,11 @@ public class GuessNumberGameWindow extends JFrame {
         button8 = new JButton();
         button9 = new JButton();
         button10 = new JButton();
-        buttons = new JButton[] {
+        buttons = new JButton[] { // contains all button
                 button1, button2, button3, button4, button5
                 , button6, button7, button8, button9, button10
         };
-        imageIconName  = new String[] {
+        imageIconName  = new String[] { // contains all icon name
                 "number1", "number2", "number3", "number4", "number5"
                 , "number6", "number7", "number8", "number9", "number10"
         };

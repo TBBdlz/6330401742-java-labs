@@ -1,3 +1,14 @@
+/*
+  DiceImageWindow is a subclass of JFrame
+  this program is GUI program
+  which can display DiceGame from lab6
+  DiceImageWindow contains variables
+  eg. Panels and Buttons to draw GUI
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 26 March 2021
+*/
 package yingyongwatthanakit.metee.lab9;
 
 import yingyongwatthanakit.metee.lab6.DiceGame;
