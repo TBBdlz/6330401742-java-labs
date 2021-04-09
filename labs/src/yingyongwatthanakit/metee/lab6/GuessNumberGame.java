@@ -72,6 +72,10 @@ public class GuessNumberGame extends Game {
         this.maxTries = maxTries;
     }
 
+    public int getCorrectNum() {
+        return correctNum;
+    }
+
     @Override
     public String toString() {
         return "Game name : " + getGameName() +
