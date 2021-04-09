@@ -34,17 +34,11 @@ public class PlayerFormV5 extends PlayerFormV4 implements ActionListener {
         birthdate = dobText.getText();
         getGender();
         playerTypeStr = (String) playerTypeBox.getSelectedItem();
-<<<<<<< HEAD
         StringBuffer res = new StringBuffer();
         res.append(nameStr).append(" has nationality as ").append(nationalityStr);
-        res.append(", birthdate as ").append(birthdate).append(", gender as ").append(genderStr);
+        res.append(", birthdate as ").append(birthdate);
+        res.append(", gender as ").append(genderStr);
         res.append(", player type as ").append(playerTypeStr);
-=======
-        String res = nameStr + " has nationality as " + nationalityStr +
-                ", birthdate as " + birthdate +
-                ", gender as " + genderStr +
-                ", player type as " + playerTypeStr;
->>>>>>> 696b241942a277f3c77c738ab5914c449016f592
         JOptionPane.showMessageDialog(this, res);
     }
 
