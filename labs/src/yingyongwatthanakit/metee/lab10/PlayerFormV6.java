@@ -1,3 +1,13 @@
+/*
+  PlayerFormV6 is GUI program
+  this program implement ItemListener
+  which can interact with JRadioButton
+  use for gender Radio Button
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 9 April 2021
+*/
 package yingyongwatthanakit.metee.lab10;
 
 import javax.swing.*;

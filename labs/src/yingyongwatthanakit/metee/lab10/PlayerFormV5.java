@@ -1,3 +1,15 @@
+/*
+  PlayerFormV5 is GUI program
+  inherit from PlayerFormV4 in lab8
+  which implement ActionListener
+  now player can enter form and
+  interact with button, text field
+  and JComboBox
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 9 April 2021
+*/
 package yingyongwatthanakit.metee.lab10;
 
 import yingyongwatthanakit.metee.lab8.PlayerFormV4;

@@ -1,3 +1,16 @@
+/*
+  GuessNumberGameWindowV2 is GUI program
+  inherit from GuessNumberGameWindow in lab9
+  also import GuessNumberGame in lab6
+  this program is basically GuessNumberGame
+  with GUI. Player can guess the number
+  and when player win the winning text will display
+  if player lose the losing text will display
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 9 April 2021
+*/
 package yingyongwatthanakit.metee.lab10;
 
 import yingyongwatthanakit.metee.lab6.GuessNumberGame;
@@ -10,6 +23,8 @@ public class GuessNumberGameWindowV2 extends GuessNumberGameWindow implements Ac
 
     protected GuessNumberGame gng;
     protected JButton srcBtn;
+    protected int maxTries;
+    protected boolean winStatus;
 
     public static int findIndex(JButton[] arr, JButton numberBtn)
     {
@@ -33,6 +48,12 @@ public class GuessNumberGameWindowV2 extends GuessNumberGameWindow implements Ac
         return -1;
     }
 
+    protected void disableButtons() {
+        for (JButton button : buttons) {
+            button.setEnabled(false);
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         srcBtn = (JButton) e.getSource();
@@ -42,18 +63,24 @@ public class GuessNumberGameWindowV2 extends GuessNumberGameWindow implements Ac
     protected void playGameGUI() {
         int playerGuess = findIndex(buttons, srcBtn) + 1;
         int correctNum = gng.getCorrectNum();
-        int maxTries = gng.getMaxTries();
-        for (int i = 0; i < maxTries; i++) {
-            if (playerGuess == correctNum) {
-                resultTextField.setText("Congratulations!!!");
-                resultTextField.setVisible(true);
-            } else if (playerGuess > correctNum) {
-                resultTextField.setText("Lower");
-                maxTries--;
-            } else {
-                resultTextField.setText("Higher");
-                maxTries--;
-            }
+        winStatus = false;
+        System.out.println(maxTries);
+        if (playerGuess == correctNum) {
+            resultTextField.setText("Congratulations!!!");
+            resultTextField.setEnabled(false);
+            disableButtons();
+            winStatus = true;
+        } else if (playerGuess > correctNum) {
+            resultTextField.setText("Lower");
+            maxTries--;
+        } else {
+            resultTextField.setText("Higher");
+            maxTries--;
+        }
+        if (!winStatus && maxTries == 0) {
+            resultTextField.setText("No more tries");
+            resultTextField.setEnabled(false);
+            disableButtons();
         }
     }
 
@@ -63,6 +90,7 @@ public class GuessNumberGameWindowV2 extends GuessNumberGameWindow implements Ac
         super.initComponents();
         resultTextField.setText("");
         gng = new GuessNumberGame(1, 10, 3);
+        maxTries = gng.getMaxTries();
         addListeners();
     }
 

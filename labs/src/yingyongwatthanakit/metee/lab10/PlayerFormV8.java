@@ -1,3 +1,15 @@
+/*
+  PlayerFormV8 is GUI program
+  this program implement ActionListener
+  the program add mnemonic key
+  and accelerator key to menu item
+  player now can interact with menu item
+  and setting form
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 9 April 2021
+*/
 package yingyongwatthanakit.metee.lab10;
 
 import javax.swing.*;

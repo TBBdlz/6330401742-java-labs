@@ -1,3 +1,12 @@
+/*
+  PlayerFormV7 is GUI program
+  this program implement ListSelectionListener
+  now user can interact with player type list
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 9 April 2021
+*/
 package yingyongwatthanakit.metee.lab10;
 
 import javax.swing.*;
