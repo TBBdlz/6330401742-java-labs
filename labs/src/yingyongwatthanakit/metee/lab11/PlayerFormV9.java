@@ -1,3 +1,14 @@
+/*
+  PlayerFormV9 is GUI program
+  this version is now robust
+  Program can catch many error
+  such as empty text field
+  and incorrect time format
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 16 April 2021
+*/
 package yingyongwatthanakit.metee.lab11;
 
 import yingyongwatthanakit.metee.lab10.PlayerFormV8;

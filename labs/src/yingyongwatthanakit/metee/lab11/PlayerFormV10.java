@@ -1,3 +1,13 @@
+/*
+  PlayerFormV10 is GUI program
+  now program can read text file
+  and updates data within the file
+  the program also can save file now
+  Author: Metee Yingyongwatthanakit
+  ID: 633040174-2
+  Sec: 2
+  Date: 16 April 2021
+*/
 package yingyongwatthanakit.metee.lab11;
 
 import javax.swing.*;
@@ -8,26 +18,41 @@ public class PlayerFormV10 extends PlayerFormV9 {
 
     protected BufferedReader bufferedReader;
     protected BufferedWriter bufferedWriter;
-    protected int[] gameIndices = {-1, -1, -1};
+    protected int[] gameIndices = new int[3];
 
     public PlayerFormV10(String title) {
         super(title);
     }
 
+    @Override
+    protected void initComponents() {
+        super.initComponents();
+    }
+
     protected void setInputAsSelectedGame(String inputTxt) {
-        switch (inputTxt) {
-            case "guess number game" -> gameList.setSelectedIndex(0);
-            case "high-low game" -> gameList.setSelectedIndex(1);
-            case "monopoly game" -> gameList.setSelectedIndex(2);
+        if (inputTxt.equalsIgnoreCase("guess number game")) {
+            gameIndices[0] = 0;
+        }
+        if (inputTxt.equalsIgnoreCase("high-low game")) {
+            gameIndices[1] = 1;
+        }
+        if (inputTxt.equalsIgnoreCase("monopoly game")) {
+            gameIndices[2] = 2;
         }
     }
 
     protected void setPlayerType(String inputTxt) {
         switch (inputTxt) {
-            case "beginner" -> gameIndices[0] = 1;
-            case "amateur" -> gameIndices[1] = 1;
-            case "professional" -> gameIndices[2] = 1;
+            case "beginner" -> playerTypeBox.setSelectedIndex(0);
+            case "amateur" -> playerTypeBox.setSelectedIndex(1);
+            case "professional" -> playerTypeBox.setSelectedIndex(2);
         }
+    }
+
+    protected void clearIndices() {
+        gameIndices[0] = -1;
+        gameIndices[1] = -1;
+        gameIndices[2] = -1;
     }
 
     protected void setGender(String inputTxt) {
@@ -43,23 +68,27 @@ public class PlayerFormV10 extends PlayerFormV9 {
             super.handleOpenMI();
             FileReader fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
-            nameText.setText(bufferedReader.readLine());
-            nationalityText.setText(bufferedReader.readLine());
-            dobText.setText(bufferedReader.readLine());
             String inputText;
             int i = 1;
             while ((inputText = bufferedReader.readLine()) != null) {
                 if (i == 1) {
-                    setGender(inputText);
-                    i++;
+                    nameText.setText(inputText);
                 } else if (i == 2) {
+                    nationalityText.setText(inputText);
+                } else if (i == 3) {
+                    dobText.setText(inputText);
+                } else if (i == 4) {
+                    setGender(inputText);
+                } else if (i == 5) {
                     setPlayerType(inputText);
-                    i++;
+
                 } else {
                     setInputAsSelectedGame(inputText);
                 }
+                i++;
             }
             gameList.setSelectedIndices(gameIndices);
+            clearIndices();
         } catch (Exception e) {
             System.err.println(Arrays.toString(e.getStackTrace()));
         }
