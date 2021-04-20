@@ -24,11 +24,6 @@ public class PlayerFormV10 extends PlayerFormV9 {
         super(title);
     }
 
-    @Override
-    protected void initComponents() {
-        super.initComponents();
-    }
-
     protected void setInputAsSelectedGame(String inputTxt) {
         if (inputTxt.equalsIgnoreCase("guess number game")) {
             gameIndices[0] = 0;
