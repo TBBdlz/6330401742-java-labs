@@ -9,7 +9,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
+
     protected String emptyStr, dobFormatStr;
+    protected Object checkList;
     public PlayerFormV9(String title) {
         super(title);
     }
@@ -53,18 +55,23 @@ public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent evt) {
-        try {
-            checkEmptyTextField();
-            checkBirthDateFormat();
-            if (lsm.isSelectionEmpty()) {
-                throw new RuntimeException("You have not selected any game");
+        if (srcBtn == submitButton || srcObj instanceof JTextField ||
+        srcObj instanceof JCheckBox) {
+            try {
+                checkEmptyTextField();
+                checkBirthDateFormat();
+                if (lsm.isSelectionEmpty()) {
+                    throw new RuntimeException("You have not selected any game");
+                }
+                super.actionPerformed(evt);
+            } catch (DateTimeParseException e) {
+                JOptionPane.showMessageDialog(this
+                        , "Please enter date in format dd-MM-yyyy such as 31-02-2021");
+            } catch (RuntimeException e) {
+                JOptionPane.showMessageDialog(this, e.getMessage());
             }
+        } else {
             super.actionPerformed(evt);
-        } catch (DateTimeParseException e) {
-            JOptionPane.showMessageDialog(this
-                    , "Please enter date in format dd-MM-yyyy such as 31-02-2021");
-        } catch (RuntimeException e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
 

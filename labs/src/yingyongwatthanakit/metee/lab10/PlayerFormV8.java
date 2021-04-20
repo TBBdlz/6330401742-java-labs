@@ -21,7 +21,9 @@ import java.io.File;
 
 public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
 
+    protected JFileChooser fileChooser, fileSave;
     protected JMenuItem srcMenuItem;
+    protected File file;
 
     public PlayerFormV8(String title) {
         super(title);
@@ -31,6 +33,7 @@ public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
     protected void initComponents() {
         super.initComponents();
         addMnemonicsAndAccelerator();
+        file = new File("/Users/tbbddl/6330401742-java-labs/labs/src/yingyongwatthanakit");
     }
 
     protected void addMnemonicsAndAccelerator() {
@@ -70,44 +73,57 @@ public class PlayerFormV8 extends PlayerFormV7 implements ActionListener {
         };
     }
 
+    protected void handleSaveMI() {
+        fileSave = new JFileChooser();
+        int option = fileSave.showSaveDialog(this);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            file = fileSave.getSelectedFile();
+            JOptionPane.showMessageDialog(this, "File saved: " + file.getName());
+        } else if (option == JFileChooser.CANCEL_OPTION) {
+            JOptionPane.showMessageDialog(this, "save command cancelled by user");
+        }
+    }
+
+    protected void handleConfigMI() {
+        int size = colorMenu.getItemCount();
+        for (int i = 0; i < size; i++) {
+            if (srcMenuItem == colorMenu.getItem(i)) {
+                Color color = getColor(colorMenu.getItem(i).getText());
+                nameText.setForeground(color);
+                nationalityText.setForeground(color);
+                dobText.setForeground(color);
+            } else if (srcMenuItem == sizeMenu.getItem(i)) {
+                float fontSize = Float.parseFloat(sizeMenu.getItem(i).getText());
+                noteTextArea.setFont(noteTextArea.getFont().deriveFont(fontSize));
+            }
+        }
+    }
+
+    protected void handleOpenMI() {
+        fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        int option = fileChooser.showOpenDialog(this);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            file = fileChooser.getSelectedFile();
+            JOptionPane.showMessageDialog(this, "File selected: " + file.getName());
+        } else if (option == JFileChooser.CANCEL_OPTION) {
+            JOptionPane.showMessageDialog(this, "Open command cancelled by user");
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
         if (srcObj instanceof JMenuItem) {
             srcMenuItem = (JMenuItem) srcObj;
             if (srcMenuItem == openItem) {
-                JFileChooser fileChooser = new JFileChooser();
-                int option = fileChooser.showOpenDialog(this);
-                if (option == JFileChooser.APPROVE_OPTION) {
-                    File file = fileChooser.getSelectedFile();
-                    JOptionPane.showMessageDialog(this, "File selected: " + file.getName());
-                } else if (option == JFileChooser.CANCEL_OPTION) {
-                    JOptionPane.showMessageDialog(this, "Open command cancelled by user");
-                }
+                handleOpenMI();
             } else if (srcMenuItem == exitItem) {
                 System.exit(0);
             } else if (srcMenuItem == saveItem) {
-                JFileChooser fileSave = new JFileChooser();
-                int option = fileSave.showSaveDialog(this);
-                if (option == JFileChooser.APPROVE_OPTION) {
-                    File file = fileSave.getSelectedFile();
-                    JOptionPane.showMessageDialog(this, "File saved: " + file.getName());
-                } else if (option == JFileChooser.CANCEL_OPTION) {
-                    JOptionPane.showMessageDialog(this, "save command cancelled by user");
-                }
+                handleSaveMI();
             } else {
-                int size = colorMenu.getItemCount();
-                for (int i = 0; i < size; i++) {
-                    if (srcMenuItem == colorMenu.getItem(i)) {
-                        Color color = getColor(colorMenu.getItem(i).getText());
-                        nameText.setForeground(color);
-                        nationalityText.setForeground(color);
-                        dobText.setForeground(color);
-                    } else if (srcMenuItem == sizeMenu.getItem(i)) {
-                        float fontSize = Float.parseFloat(sizeMenu.getItem(i).getText());
-                        noteTextArea.setFont(noteTextArea.getFont().deriveFont(fontSize));
-                    }
-                }
+                handleConfigMI();
             }
         }
     }
