@@ -62,6 +62,7 @@ public class PlayerFormV10 extends PlayerFormV9 {
             case "others" -> othersRatioButton.setSelected(true);
         }
     }
+
     @Override
     protected void handleOpenMI() {
         try {

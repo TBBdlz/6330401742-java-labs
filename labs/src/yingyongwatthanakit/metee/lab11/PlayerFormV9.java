@@ -22,7 +22,6 @@ import java.time.format.DateTimeParseException;
 public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
 
     protected String emptyStr, dobFormatStr;
-    protected Object checkList;
     public PlayerFormV9(String title) {
         super(title);
     }
@@ -33,7 +32,6 @@ public class PlayerFormV9 extends PlayerFormV8 implements ActionListener {
         emptyStr = "";
         dobFormatStr = "";
     }
-
 
     protected void checkEmptyTextField() {
         emptyStr = "";
