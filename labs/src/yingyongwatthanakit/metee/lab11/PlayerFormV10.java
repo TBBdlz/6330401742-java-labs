@@ -13,6 +13,7 @@ package yingyongwatthanakit.metee.lab11;
 import javax.swing.*;
 import java.io.*;
 import java.util.Arrays;
+import java.util.List;
 
 public class PlayerFormV10 extends PlayerFormV9 {
 
@@ -62,7 +63,7 @@ public class PlayerFormV10 extends PlayerFormV9 {
     protected void handleOpenMI() {
         try {
             super.handleOpenMI();
-            FileReader fileReader = new FileReader(file);
+            FileReader fileReader = new FileReader(file.getName());
             bufferedReader = new BufferedReader(fileReader);
             String inputText;
             int i = 1;
@@ -99,8 +100,13 @@ public class PlayerFormV10 extends PlayerFormV9 {
             bufferedWriter.write(nameText.getText() + "\n");
             bufferedWriter.write(nationalityText.getText() + "\n");
             bufferedWriter.write(dobText.getText() + "\n");
+            getGender();
             bufferedWriter.write(genderStr + "\n");
-            bufferedWriter.write(playerTypeStr + "\n");
+            bufferedWriter.write(playerTypeBox.getSelectedItem() + "\n");
+            List<String> selectedGames = gameList.getSelectedValuesList();
+            String allSelectedGames = String.join("\n", selectedGames);
+            bufferedWriter.write(allSelectedGames);
+            bufferedWriter.close();
         } catch (Exception e) {
             System.out.println(Arrays.toString(e.getStackTrace()));
         }
