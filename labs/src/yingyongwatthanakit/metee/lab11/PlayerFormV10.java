@@ -63,7 +63,7 @@ public class PlayerFormV10 extends PlayerFormV9 {
     protected void handleOpenMI() {
         try {
             super.handleOpenMI();
-            FileReader fileReader = new FileReader(file.getName());
+            FileReader fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
             String inputText;
             int i = 1;
