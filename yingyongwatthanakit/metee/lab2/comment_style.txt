@@ -1,5 +1,0 @@
-Patient
-    - use variables for args. Do not printout args variable directly.
-
-PrimitiveDataType
-    - cannot open. Asking for password.
